@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Just For You, My Love! 💖</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-pink': '#fce7f3',
+                        'elegant-gold': '#D4AF37',
+                        'deep-red': '#880808',
+                        'paper-white': '#FDFBF7'
+                    },
+                    fontFamily: {
+                        script: ['Great Vibes', 'cursive'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fce7f3;
+            background-image: radial-gradient(#ffd1dc 1px, transparent 1px);
+            background-size: 20px 20px;
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+        }
+        .photo-container {
+            position: absolute;
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 10px 15px rgba(0,0,0,0.1);
+            border: 8px solid white;
+            border-bottom-width: 24px;
+            background-color: white;
+            z-index: 5;
+            width: 75px;
+            height: 100px;
+        }
+        .photo-container:hover { transform: scale(1.35) rotate(0deg) !important; box-shadow: 0 25px 50px rgba(0,0,0,0.3); z-index:100!important; }
+        .photo-image { width:100%; height:100%; display:block; object-fit:cover; }
+        .p1 { top:5%; left:5%; transform:rotate(6deg); }
+        .p2 { top:15%; left:15%; transform:rotate(-8deg); z-index:6; }
+        .p3 { top:2%; left:25%; transform:rotate(12deg); }
+        .p4 { top:5%; right:8%; transform:rotate(-5deg); }
+        .p5 { top:18%; right:18%; transform:rotate(8deg); z-index:6; }
+        .p14 { top:8%; right:23%; transform:rotate(-3deg); }
+        .p6 { bottom:8%; left:8%; transform:rotate(-12deg); }
+        .p7 { bottom:25%; left:5%; transform:rotate(5deg); z-index:4; }
+        .p8 { bottom:15%; left:21%; transform:rotate(15deg); z-index:7; }
+        .p9 { bottom:5%; right:8%; transform:rotate(4deg); }
+        .p10 { bottom:22%; right:11%; transform:rotate(-10deg); z-index:6; }
+        .p11 { bottom:10%; right:23%; transform:rotate(9deg); z-index:5; }
+        .p12 { top:50%; left:23%; transform:rotate(-15deg); z-index:6; }
+        .p13 { top:50%; right:18%; transform:rotate(12deg); z-index:6; }
+
+        @media (max-width:768px) {
+            .photo-container { border-width:4px; border-bottom-width:12px; opacity:0.9; }
+            .photo-container:hover { transform: scale(1.5) rotate(0deg) !important; }
+            .p1 { top:22%; left:30%; transform:rotate(8deg); }
+            .p2 { top:35%; left:8%; transform:rotate(-10deg); z-index:6; }
+            .p3 { top:55%; left:8%; transform:rotate(15deg); }
+            .p4 { top:22%; right:30%; transform:rotate(-6deg); }
+            .p5 { top:30%; right:8%; transform:rotate(10deg); z-index:6; }
+            .p6 { bottom:25%; left:10%; transform:rotate(-15deg); }
+            .p7 { bottom:20%; left:20%; transform:rotate(7deg); z-index:4; }
+            .p8 { bottom:45%; left:8%; transform:rotate(18deg); z-index:7; }
+            .p9 { bottom:20%; right:10%; transform:rotate(5deg); }
+            .p10 { bottom:30%; right:10%; transform:rotate(-12deg); z-index:6; }
+            .p11 { bottom:50%; right:8%; transform:rotate(11deg); z-index:5; }
+            .p12 { top:22%; left:8%; transform:rotate(-15deg); }
+            .p13 { top:50%; right:10%; transform:rotate(12deg);z-index:7;}
+            .p14 { top:22%; right:8%; transform:rotate(-4deg); }
+            .love-card { max-width: 90% !important; padding: 1rem !important; }
+        }
+
+        .emoji {
+            position: fixed;
+            opacity: 0;
+            pointer-events: none;
+            user-select: none;
+            z-index: 9999;
+            will-change: transform, opacity;
+            font-size: 18px;
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display:none; }
+        .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+    </style>
+</head>
+<body>
+
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+        <div id="love-card" class="love-card relative bg-white/40 backdrop-blur-sm p-5 md:p-7 shadow-2xl rounded-sm max-w-xs w-full text-center border border-gray-200 overflow-hidden transform transition-all hover:scale-[1.02] z-50" style="transform: scale(0.85);">
+            <div class="relative z-10 flex flex-col items-center">
+                <div class="text-3xl mb-2 text-deep-red opacity-80">💙🥀</div>
+                <h1 class="text-3xl md:text-4xl font-script text-deep-red mb-2 leading-tight">For My Love</h1>
+                <div class="w-16 h-0.5 bg-elegant-gold mb-4"></div>
+                <div class="text-base md:text-lg font-serif text-gray-800 leading-relaxed italic opacity-90 mb-6 max-h-[60vh] overflow-y-auto no-scrollbar">
+                    <p>
+                        My Dearest Girl,<br/><br/>
+                        This little messy collage is just like my heart full of memories of you. Every photo here is a moment I treasure, but none of them compare to the real thing. You're my everything. My love. My Covalent Bond <br/><br/>
+                        You are my happiness.<br/>
+                        I LOVE YOU <br/>
+                    </p>
+                </div>
+
+                <button id="kiss-btn" class="mt-2 px-8 py-3 bg-soft-pink text-deep-red font-serif font-bold tracking-widest text-sm uppercase rounded-full shadow-md hover:shadow-lg hover:scale-105 transition duration-300 transform active:scale-95 border border-soft-pink">
+                    Tap for kisses!!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="photo-wall">
+        <div class="photo-container p1" data-caption="Beginning of Story"><img class="photo-image" src="image/20.jpeg" alt="Photo"></div>
+        <div class="photo-container p2" data-caption="Pure Joy"><img class="photo-image" src="image/10.jpeg" alt="Photo"></div>
+        <div class="photo-container p3" data-caption="Heart"><img class="photo-image" src="image/18.jpeg" alt="Photo"></div>
+        <div class="photo-container p4" data-caption="Remember this?"><img class="photo-image" src="image/8.jpeg" alt="Photo"></div>
+        <div class="photo-container p5" data-caption="Ice-cream!"><img class="photo-image" src="image/1.jpeg" alt="Photo"></div>
+        <div class="photo-container p12" data-caption="Cutie-pie"><img class="photo-image" src="image/6.jpeg" alt="Photo"></div>
+        <div class="photo-container p13" data-caption="Happiness"><img class="photo-image" src="image/4.jpeg" alt="Photo"></div>
+        <div class="photo-container p14" data-caption="Silly faces"><img class="photo-image" src="image/12.jpeg" alt="Photo"></div>
+        <div class="photo-container p6" data-caption="Hand in hand"><img class="photo-image" src="image/14.jpeg" alt="Photo"></div>
+        <div class="photo-container p7" data-caption="If We Were Cartoon."><img class="photo-image" src="image/16.jpeg" alt="Photo"></div>
+        <div class="photo-container p8" data-caption="Meri Sani."><img class="photo-image" src="image/15.jpeg" alt="Photo"></div>
+        <div class="photo-container p9" data-caption="Love Birds"><img class="photo-image" src="image/21.jpeg" alt="Photo"></div>
+        <div class="photo-container p10" data-caption="Hidimbi."><img class="photo-image" src="image/3.jpeg" alt="Photo"></div>
+        <div class="photo-container p11" data-caption="Forever"><img class="photo-image" src="image/9.jpeg" alt="Photo"></div>
+    </div>
+
+    <!-- LOOPING BACKGROUND MUSIC (ADDED) -->
+    <audio id="bg-music" src="music/music1.mpeg" autoplay loop></audio>
+
+    <script>
+        const card = document.getElementById('love-card');
+        const kissBtn = document.getElementById('kiss-btn');
+        const emojis = ['🐼','💫','❤️','🎀','🐷','🫶','🌻','✨'];
+
+        function createFallingEmoji() {
+            const emojiChar = emojis[Math.floor(Math.random() * emojis.length)];
+            const el = document.createElement('span');
+            el.className = 'emoji';
+            el.textContent = emojiChar;
+
+            const rect = card.getBoundingClientRect();
+            const startX = Math.min(window.innerWidth - 20, Math.max(10, rect.left + Math.random() * rect.width));
+            const startY = Math.max(-50, rect.top - 10);
+
+            el.style.left = `${startX}px`;
+            el.style.top = `${startY}px`;
+
+            const size = (Math.random() * 1.2 + 0.8) * 18;
+            el.style.fontSize = `${size}px`;
+            el.style.opacity = '0.95';
+
+            document.body.appendChild(el);
+
+            const fallDistance = (window.innerHeight - startY) + 200 + Math.random() * 150;
+            const driftX = (Math.random() - 0.5) * 200;
+            const duration = Math.random() * 3500 + 3000;
+
+            const anim = el.animate([
+                { transform: 'translate(0px, 0px) rotate(0deg)', opacity: 0 },
+                { transform: `translate(${driftX}px, ${fallDistance}px) rotate(${(Math.random()-0.5)*360}deg)`, opacity: 1 }
+            ], {
+                duration: duration,
+                easing: 'linear',
+                fill: 'forwards'
+            });
+
+            setTimeout(() => {
+                el.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 600, fill: 'forwards' });
+            }, duration - 650);
+
+            anim.onfinish = () => el.remove();
+        }
+
+        let emojiInterval = null;
+        function startFallingEmojis() {
+            if (emojiInterval) clearInterval(emojiInterval);
+            emojiInterval = setInterval(createFallingEmoji, 420);
+        }
+
+        function startEmojiBurst(x, y) {
+            const burstEmojis = ['💋','🥰','❤️','😘'];
+            const count = 18;
+
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('span');
+                el.className = 'emoji';
+                el.textContent = burstEmojis[Math.floor(Math.random() * burstEmojis.length)];
+                el.style.left = `${x}px`;
+                el.style.top = `${y}px`;
+                el.style.fontSize = `${Math.random()*22 + 12}px`;
+                el.style.opacity = '1';
+                el.style.zIndex = 99999;
+                document.body.appendChild(el);
+
+                const angle = Math.random() * Math.PI * 2;
+                const distance = Math.random() * 160 + 60;
+                const destX = Math.round(x + Math.cos(angle) * distance);
+                const destY = Math.round(y + Math.sin(angle) * distance - (Math.random()*30));
+                const rotate = (Math.random() - 0.5) * 720;
+                const dur = Math.random() * 700 + 700;
+
+                el.animate([
+                    { transform: 'translate(0,0) scale(1) rotate(0deg)', opacity: 1 },
+                    { transform: `translate(${destX - x}px, ${destY - y}px) scale(0.4) rotate(${rotate}deg)`, opacity: 0 }
+                ], {
+                    duration: dur,
+                    easing: 'cubic-bezier(0.22,1,0.36,1)',
+                    fill: 'forwards'
+                }).onfinish = () => el.remove();
+            }
+        }
+
+        kissBtn.addEventListener('click', (ev) => {
+            const x = ev.clientX || (kissBtn.getBoundingClientRect().left + kissBtn.offsetWidth/2);
+            const y = ev.clientY || (kissBtn.getBoundingClientRect().top + kissBtn.offsetHeight/2);
+            startEmojiBurst(x, y);
+        });
+
+        
+
+        document.querySelectorAll('.photo-container').forEach(photo => {
+            const captionText = photo.getAttribute('data-caption');
+            const tooltip = document.createElement('div');
+            tooltip.classList.add('absolute', '-bottom-8', 'left-1/2', 'transform', '-translate-x-1/2',
+                'bg-gray-800', 'text-white', 'px-3', 'py-1', 'text-sm', 'whitespace-nowrap',
+                'opacity-0', 'transition-opacity', 'duration-300', 'rounded-full',
+                'font-serif', 'italic', 'z-50', 'pointer-events-none', 'shadow-lg');
+            tooltip.innerHTML = captionText;
+            photo.appendChild(tooltip);
+
+            photo.addEventListener('mouseenter', () => tooltip.classList.remove('opacity-0'));
+            photo.addEventListener('mouseleave', () => tooltip.classList.add('opacity-0'));
+            photo.addEventListener('click', () => {
+                tooltip.classList.remove('opacity-0');
+                setTimeout(() => tooltip.classList.add('opacity-0'), 1500);
+            });
+        });
+
+        window.addEventListener('load', startFallingEmojis);
+        window.addEventListener('focus', () => { if (!emojiInterval) startFallingEmojis(); });
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                if (emojiInterval) { clearInterval(emojiInterval); emojiInterval = null; }
+            } else {
+                if (!emojiInterval) startFallingEmojis();
+            }
+        });
+
+        // AUTOPLAY FIX FOR MOBILE (ADDED)
+        const music = document.getElementById('bg-music');
+        function tryPlayMusic() {
+            music.play().catch(() => {
+                // wait for user interaction
+                document.addEventListener('click', () => music.play(), { once: true });
+                document.addEventListener('touchstart', () => music.play(), { once: true });
+            });
+        }
+        tryPlayMusic();
+    </script>
+
+</body>
+</html>
